@@ -14,10 +14,15 @@ def main():
 
     client = VASTClient(user=API_USERNAME, password=API_PASSWORD, address=VMS_IP)
 
-    # Print all views
+    # Print all Alarms
+    print("VAST Alarms List")
     for alarm in client.alarms.get():
         print(alarm)
 
+    # Print all SSDs
+    print("VAST SSDs List")
+    for ssd in client.ssds.get():
+        print(ssd)
 
 if __name__ == "__main__":
     main()
