@@ -3,6 +3,14 @@ import os
 from dotenv import load_dotenv, find_dotenv
 from vastpy import VASTClient
 
+#Print raw API response for debug purpose
+def print_api_response(api_response):
+    print("------------------------------------------------------------------------------------")
+    print(api_response)
+    for key, value in api_response.items():
+        print(key, value)
+
+
 ############# MAIN ##############
 def main():
     #load_dotenv(find_dotenv())  # Load the .env file.
@@ -17,12 +25,12 @@ def main():
     # Print all Alarms
     print("VAST Alarms List")
     for alarm in client.alarms.get():
-        print(alarm)
+        print_api_response(alarm)
 
     # Print all SSDs
     print("VAST SSDs List")
     for ssd in client.ssds.get():
-        print(ssd)
+        print_api_response(ssd)
 
 if __name__ == "__main__":
     main()
