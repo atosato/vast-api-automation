@@ -32,5 +32,12 @@ def main():
     for ssd in client.ssds.get():
         print_api_response(ssd)
 
+    # Print Cluster details and metrics
+    print("VAST Cluster Details and Metrics")
+    for cluster in client.clusters.get():
+        print_api_response(cluster)
+
+
+
 if __name__ == "__main__":
     main()
