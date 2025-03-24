@@ -23,19 +23,33 @@ def main():
     client = VASTClient(user=API_USERNAME, password=API_PASSWORD, address=VMS_IP)
 
     # Print all Alarms
-    print("VAST Alarms List")
+    print("<<<vast_data_alarms:sep(0)>>>")
     for alarm in client.alarms.get():
-        print_api_response(alarm)
-
-    # Print all SSDs
-    print("VAST SSDs List")
-    for ssd in client.ssds.get():
-        print_api_response(ssd)
+        print(alarm)
+        #print_api_response(alarm)
 
     # Print Cluster details and metrics
-    print("VAST Cluster Details and Metrics")
+    print("<<<vast_data_cluster:sep(0)>>>")
     for cluster in client.clusters.get():
-        print_api_response(cluster)
+        print(cluster)
+        #print_api_response(cluster)
+
+    # Print all SSDs
+    print("<<<vast_data_ssds:sep(0)>>>")
+    for ssd in client.ssds.get():
+        print(ssd)
+        #print_api_response(ssd)
+
+    print("<<<vast_data_tenants:sep(0)>>>")
+    for tenant in client.tenants.get():
+        print(tenant)
+        #print_api_response(tenant)
+
+    print("<<<vast_data_views:sep(0)>>>")
+    for view in client.views.get():
+        print(view)
+        #print_api_response(view)
+
 
 
 
