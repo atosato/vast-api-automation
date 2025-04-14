@@ -1,4 +1,4 @@
-Basic automation samples for VAST Data platform
+CheckMK agent sample for VAST Data platform
 ----
 checkmk-vast-agent.py is a simple agent to query VAST using local check:
 https://docs.checkmk.com/latest/en/localchecks.html
