@@ -6,7 +6,7 @@ For a quick repository setup follow these steps.
 
 Clone this github repository:
 ```
-git clone https://github.com/atosato/vast-automation.git
+git clone https://github.com/atosato/vast-api-automation.git
 ```
 
 Create a Python virtual environment:
